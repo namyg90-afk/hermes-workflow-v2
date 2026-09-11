@@ -2,12 +2,12 @@
 
 이 문서는 이 저장소의 **자동 설치·점검·복구용 단일 진입점**입니다.
 
-사용자는 이 문서를 직접 단계별로 따라 하기보다, Codex 같은 에이전트에게
-이 저장소와 `BOOTSTRAP.md`를 읽도록 지시하는 것을 권장합니다.
+사용자는 이 문서를 직접 단계별로 따라 하기보다,
+Codex 같은 에이전트에게 이 저장소와 `BOOTSTRAP.md`를 읽도록 지시하는 것을 권장합니다.
 
 ---
 
-## 1. 목표
+# 1. 목표
 
 다음 환경을 가능한 범위까지 자동으로 구성하고 실제 호출까지 검증합니다.
 
@@ -18,7 +18,19 @@
 - Claude via agy
 - Claude Code CLI
 - Claude Max 로그인 경로
-- 향후 Telegram gateway 연결을 위한 기본 상태 확인
+- Telegram Bot
+- Hermes ↔ Telegram gateway
+- 사용자 pairing / authorization
+- PC 재시작 후 Telegram 챗봇 재동작 확인
+  
+최종 완료 기준은 단순 설치가 아니라 다음 왕복 경로가 실제 동작하는 것입니다.
+
+```text
+Telegram
+→ Hermes
+→ AI Model
+→ Hermes
+→ Telegram
 
 원칙:
 
